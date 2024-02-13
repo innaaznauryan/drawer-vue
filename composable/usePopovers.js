@@ -5,7 +5,7 @@ export const withBackdrop = ref(true)
 export const header = ref("Info")
 export const direction = ref("left")
 export const buttonIsActive = ref(true)
-export const buttonCursor = ref("cursor")
+export const buttonCursor = ref("pointer")
 export const buttonIsDisabled = ref(false)
 
 export function setDefaultValues() {

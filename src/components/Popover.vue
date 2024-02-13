@@ -26,14 +26,14 @@ import {
   buttonIsActive,
   buttonCursor,
   buttonIsDisabled
-} from "../../composable/useParams.js"
+} from "../../composable/usePopovers.js"
 
 const modal = ref(null)
 const dimensions = {
   left: {left: 0, right: 'auto', top: 0, bottom: 'auto', width: '400px', height: '100vh'},
   right: {left: 'auto', right: 0, top: 0, bottom: 'auto', width: '400px', height: '100vh'},
-  top: {left: 0, right: 'auto', top: 0, bottom: 'auto', width: '100%', height: '200px'},
-  bottom: {left: 0, right: 'auto', top: 'auto', bottom: 0, width: '100%', height: '200px'}
+  top: {left: 0, right: 'auto', top: 0, bottom: 'auto', width: '100%', height: 'fit-content'},
+  bottom: {left: 0, right: 'auto', top: 'auto', bottom: 0, width: '100%', height: 'fit-content'}
 }
 const closePopover = () => {
   modal.value.hidePopover()
@@ -42,14 +42,12 @@ const handleToggle = (e) => {
   if (!e.target.matches(":popover-open")) {
     document.body.style.overflowY = "visible"
     buttonIsActive.value = true
-    buttonCursor.value = "cursor"
+    buttonCursor.value = "pointer"
     buttonIsDisabled.value = false
-    console.log("active", buttonIsActive.value, buttonCursor.value, "disabled", buttonIsDisabled.value)
   } else if (e.target.popover === "auto") {
     buttonIsActive.value = false
     buttonCursor.value = "default"
     buttonIsDisabled.value = true
-    console.log("active", buttonIsActive.value, buttonCursor.value, "disabled", buttonIsDisabled.value)
   }
 }
 </script>

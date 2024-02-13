@@ -13,14 +13,15 @@
       for navigation, contact forms, informational purposes or other user actions.</p>
     <div class="links">
       <a class="btn secondary isActive" href="https://tailwindcss.com/" target="_blank">Tailwind</a>
-      <a class="btn withArrow isActive" href="https://flowbite.com/docs/components/drawer/" target="_blank">Drawer Component</a>
+      <a class="btn withArrow isActive" href="https://flowbite.com/docs/components/drawer/" target="_blank">Drawer
+        Component</a>
     </div>
   </div>
 </template>
 
 <script setup>
 import {IconInfoCircleFilled, IconX} from "@tabler/icons-vue"
-import {header} from "../../composable/useParams.js"
+import {header} from "../../composable/usePopovers.js"
 
 const emit = defineEmits(["close"])
 const handleClose = () => {

@@ -2,6 +2,7 @@
   <button
       class="btn"
       :class="{isActive: buttonIsActive}"
+      :disabled="buttonIsDisabled"
       :style="{cursor: buttonCursor}"
       @click="handleClick"
       popovertarget="modal"
@@ -18,8 +19,7 @@ import {
   buttonIsActive,
   buttonCursor,
   buttonIsDisabled
-} from "../../composable/useParams.js"
-
+} from "../../composable/usePopovers.js"
 
 const handleClick = (e) => {
   if (e.target.dataset.dir) {
